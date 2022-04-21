@@ -31,11 +31,13 @@ podman run -d --name sprin-boot-app-$PORT \
     docker.io/liangdi/spring-boot-launcher
 ```
 #### 交互运行
+```
 podman run -it --rm \
     -v ./:/deploy \
     -e APP_PORT=$PORT \
     -p $PORT:$PORT \
     docker.io/liangdi/spring-boot-launcher:11 
+```
 
 ### 打包编译
 
